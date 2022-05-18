@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Конструирование Интернет-приложений</title>
+    <meta charset="utf-8">
+    <meta name="keywords" content="конструирование, интернет-приложения">
+    <meta name="author" content="Адамова А.А.">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/script.js"></script>
+    
+</head>
+<body onload="{
+        setDoctors(); setDays(); setShifts();
+    } ">
+    <div class="px-3 py-2 bg-light text-black">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+                    <img class="bi me-2" src="images/bootstrap.svg" alt="Bootstrap" width="32" height="32">
+                    <span class="fs-4 text-black">With Bootstrap</span>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <div class="container">
+            <h1>Доктор</h1> 
+            <select id="Doctors" onchange="DoctorSelected()"></select>
+            <div class="col-12" id="Sched"></div>
+            <h1>Расписание</h1>
+            <!--<p>-->
+                <h2>Добавить смену:</h2>
+            <!--</p>-->
+            <div class="col-6">
+                <form>
+                   
+                    <div>
+                        Номер кабинета<br />
+                        <input id="nroom" class="form-control" type="text" placeholder="Номер" required>
+                        <br>
+                        <select id="Shifts"></select>
+                        <select id="Days"></select>
+                    </div>
+                    <br />
+                    <button type="button" onclick="Create()" class="btn btn-primary">
+                        Добавить
+                    </button>
+                </form>
+            </div>
+            <h2>Само расписание:</h2>
+            <div id="schedules" class="col-12">
+
+            </div>
+        </div>
+    </main>
+
+    <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <div class="col-md-4 d-flex align-items-center">
+                <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+                    <img class="bi" src="images/bootstrap.svg" alt="Bootstrap" width="32" height="32">
+                </a>
+                <span class="text-muted">© 2022 Адамова А.А. 3-41</span>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
